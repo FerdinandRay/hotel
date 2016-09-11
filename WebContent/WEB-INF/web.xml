@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>Hotel</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>UserServlet</servlet-name>
+		<servlet-class>com.hotel.servlet.UserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserServlet</servlet-name>
+		<url-pattern>/userServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>RoomTypeServlet</servlet-name>
+		<servlet-class>com.hotel.servlet.RoomTypeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RoomTypeServlet</servlet-name>
+		<url-pattern>/roomTypeServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CustomerServlet</servlet-name>
+		<servlet-class>com.hotel.servlet.CustomerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CustomerServlet</servlet-name>
+		<url-pattern>/customerServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LevelServlet</servlet-name>
+		<servlet-class>com.hotel.servlet.LevelServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LevelServlet</servlet-name>
+		<url-pattern>/levelServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>RoomServlet</servlet-name>
+		<servlet-class>com.hotel.servlet.RoomServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RoomServlet</servlet-name>
+		<url-pattern>/roomServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CheckinServlet</servlet-name>
+		<servlet-class>com.hotel.servlet.CheckinServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CheckinServlet</servlet-name>
+		<url-pattern>/checkinServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CheckoutServlet</servlet-name>
+		<servlet-class>com.hotel.servlet.CheckoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CheckoutServlet</servlet-name>
+		<url-pattern>/checkoutServlet</url-pattern>
+	</servlet-mapping>
+	
+
+	<filter>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<filter-class>com.hotel.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>charset</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+</web-app>
